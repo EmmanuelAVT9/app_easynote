@@ -1,3 +1,4 @@
+import 'package:app_easynote/widgets/custom_botton_navigation_bar.dart';
 import 'package:app_easynote/widgets/hamburguer_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:app_easynote/widgets/reusable_button.dart';
@@ -63,7 +64,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: [
           IconButton(
-            icon: Icon(Icons.note),
+            icon: Icon(Icons.supervised_user_circle_outlined),
+            onPressed: () {
+              // Navegar a la pantalla de Notas
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.person),
             onPressed: () {
               // Navegar a la pantalla de Notas
             },
@@ -77,10 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       drawer: HamburgerMenu(), // Menú hamburguesa
-
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -96,60 +102,39 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.red,
-                      height: 100,
-                      child: const Center(child: Text('Fila 1, Columna 1')),
+                  Container(
+                    width: 150, // Ancho del botón
+                    height: 50, // Alto del botón
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Acción para el botón Notas
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFFBCB4FF), // Color de fondo
+                        onPrimary: Colors.black, // Color de la letra
+                      ),
+                      child: Text(
+                        'Notas',
+                        style: TextStyle(fontSize: 18), // Tamaño de fuente
+                      ),
                     ),
                   ),
                   SizedBox(width: 20), // Espacio horizontal entre columnas
-                  Expanded(
-                    child: Container(
-                      color: Colors.deepPurpleAccent,
-                      height: 100,
-                      child: const Center(child: Text('Fila 1, Columna 2')),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20), // Espacio vertical entre filas
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.green,
-                      height: 100,
-                      child: const Center(child: Text('Fila 2, Columna 1')),
-                    ),
-                  ),
-                  const SizedBox(width: 20), // Espacio horizontal entre columnas
-                  Expanded(
-                    child: Container(
-                      color: Colors.orange,
-                      height: 100,
-                      child: const Center(child: Text('Fila 2, Columna 2')),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20), // Espacio vertical entre fila
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.purple,
-                      height: 100,
-                      child: const Center(child: Text('Fila 3, Columna 1')),
-                    ),
-                  ),
-                  SizedBox(width: 20), // Espacio horizontal entre columnas
-                  Expanded(
-                    child: Container(
-                      color: Colors.yellow,
-                      height: 100,
-                      child: Center(child: Text('Fila 3, Columna 2')),
+                  Container(
+                    width: 150, // Ancho del botón
+                    height: 50, // Alto del botón
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Acción para el botón Notas
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFFBCB4FF), // Color de fondo
+                        onPrimary: Colors.black, // Color de la letra
+                      ),
+                      child: Text(
+                        'Carpetas',
+                        style: TextStyle(fontSize: 18), // Tamaño de fuente
+                      ),
                     ),
                   ),
                 ],
@@ -170,6 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
         )
 
       ),
+      bottomNavigationBar: CustomBottomNavigationBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Acción para agregar una nueva nota
