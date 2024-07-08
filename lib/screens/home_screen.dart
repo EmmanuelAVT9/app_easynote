@@ -6,7 +6,7 @@ import 'package:app_easynote/widgets/hamburguer_menu.dart';
 import 'package:app_easynote/widgets/reusable_button.dart';
 import 'package:provider/provider.dart';
 
-import '/provider/note_provider.dart';
+import '../provider/note_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             TextButton(
-              child: const Text('Agregar nota'),
+              child: const Text('Añadir'),
               onPressed: () {
                 Provider.of<NoteProvider>(context, listen: false)
                     .insert(controller.text);
@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     const Text(
-                      'EasyNotes',
+                      'EasyNote',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 30.0,
