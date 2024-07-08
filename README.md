@@ -2,16 +2,10 @@
 
 Aplicacion mòvil de notas
 
-## Getting Started
+# Requerimientos
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# app_easynote" 
+- Flutter SDK versión 3.16.5
+- Dart SDK versión 3.2.3
+- Plugins en Android Studio: Dart and Flutter.
+- Paquetes: sqflite 2.3.2, provider 6.1.2, path 1.8.3, flutter_screenutil: ^5.9.3
+- Android Studio Giraffe 2022.3.1 Patch 3

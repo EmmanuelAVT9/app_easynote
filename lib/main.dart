@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:sqflite/sqflite.dart';
 //import 'screens/home_screen.dart';
 import 'views/home/home_view.dart';
+import 'views/home/splash_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,10 +31,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.limeAccent),
         useMaterial3: true,
       ),
-      home: ChangeNotifierProvider(
-          create: (context) =>
-              NoteProvider(db: Provider.of<Database>(context, listen: false)),
-          child: const HomeScreen()),
+      home: const SplashScreen(),
+      routes: {
+        '/home': (context) => ChangeNotifierProvider(
+          create: (context) => NoteProvider(
+              db: Provider.of<Database>(context, listen: false)),
+          child: const HomeScreen(),
+        ),
+      },
     );
   }
 }
