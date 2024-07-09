@@ -18,7 +18,7 @@ y carpetas.
 
 Se realizo el diseño en Figma de la aplicación móvil seleccionando una paleta de colores y fuente adecuada.
 
-![design app](assets/diseño_figma.png)
+![design app](assets/diseñoux_figma.png)
 
 # Flujo de la aplicaciòn mòvil
 
